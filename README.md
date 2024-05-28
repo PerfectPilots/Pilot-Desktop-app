@@ -1,2 +1,2 @@
-# Pilot-Desktop-app
-Perfect pilot custom desktop app
+# Virtual Pilot Institute Desktop Application
+Virtual Pilot Institute custom desktop application.
