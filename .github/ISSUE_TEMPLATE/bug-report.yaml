@@ -2,6 +2,7 @@ name: Bug Report for VPI Desktop App
 description: Create a report to help us improve the VPI Desktop App
 labels: [ "bug", "pending" ]
 assignees: [ "JackMcLeanGSY" ]
+projects: [ "Pilot-Desktop-app" ]
 body:
   - type: markdown
     attributes:
