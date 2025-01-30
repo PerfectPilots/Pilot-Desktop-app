@@ -1,70 +1,88 @@
-name: Bug report (VPI Desktop App)
-description: Report a found issue in the VPI Desktop App
-labels: ["bug", "pending"]
-assignees: ["JackMcLeanGSY"]
+name: Bug Report for VPI Desktop App
+description: Create a report to help us improve the VPI Desktop App
+labels: [ "bug", "pending" ]
+assignees: [ "JackMcLeanGSY" ]
 body:
   - type: markdown
     attributes:
       value: |
-        Hello! Thank you for reporting an issue in the VPI Desktop App.
+        Hello! Thank you for reporting a bug in the VPI Desktop App.
         
-        Before submitting your report, please check existing issues in this repository - you can filter them by the "bug" label (including closed ones).
-        
+        Before submitting your bug, please ensure that you have checked for existing bug reports to avoid duplicates. You can filter by the "bug" label to see if it has already been reported.
+
+        Also, if you’ve encountered a problem with a specific feature or page within the app, please make sure to specify it below.
   - type: input
     id: discord_username
     attributes:
-      label: Your Discord username
-      description: This is your Discord Username. Required for us to contact you if needed.
+      label: Your Discord Username
+      description: Your Discord username will help us contact you if we need more information.
     validations:
       required: true
-  
+  - type: textarea
+    id: describe_bug
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is in the VPI Desktop App.
+    validations:
+      required: true
+  - type: textarea
+    id: to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide the steps to reproduce the bug within the VPI Desktop App.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen when using the app?
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (if applicable)
+      description: If applicable, please attach any screenshots or logs that might help explain the bug.
+    validations:
+      required: false
+  - type: input
+    id: os_browser
+    attributes:
+      label: Desktop OS and Version
+      description: Please provide your operating system and version (e.g., Windows 10, macOS 11).
+    validations:
+      required: true
   - type: input
     id: app_version
     attributes:
-      label: VPI Desktop App version
-      description: Please include the version number, which can be found in the app footer.
+      label: VPI Desktop App Version
+      description: What version of the VPI Desktop App are you using? (e.g., v1.0.0).
     validations:
       required: true
-  
-  - type: textarea
-    id: issue_description
-    attributes:
-      label: Describe the issue
-      description: Provide details about the issue, expected vs actual results, and include screenshots/videos if possible.
-    validations:
-      required: true
-  
-  - type: textarea
-    id: reproduction_steps
-    attributes:
-      label: Steps to reproduce
-      description: Describe step-by-step how to reproduce the issue. If related to a specific user or controller, include callsign(s) and CID(s). Attach a video if it's hard to replicate.
-    validations:
-      required: true
-  
   - type: input
-    id: platform
+    id: device_os_browser
     attributes:
-      label: Platform
-      description: Specify your platform (Windows, macOS, Linux), as well as the browser version if applicable.
+      label: Device and OS (if applicable)
+      description: If you’re experiencing the bug on a mobile version, provide the device and OS details (e.g., iPhone 12, iOS 15).
     validations:
-      required: true
-  
+      required: false
   - type: textarea
     id: additional_info
     attributes:
-      label: Additional Information
-      description: Any other relevant details we should know?
+      label: Additional Context
+      description: Please provide any additional information that could be helpful in diagnosing the bug.
     validations:
       required: false
-  
   - type: checkboxes
     id: validation
     attributes:
       label: Validation
-      description: Please confirm the following before submitting your report:
+      description: Please validate your report
       options:
-        - label: I have searched for existing issues and found none matching mine.
+        - label: I have searched for other reports and didn't find any alike
           required: true
-        - label: I have checked the roadmap to ensure this is not already planned.
+        - label: I have tried restarting the app, and the issue persists
+          required: true
+        - label: The bug still occurs after updating to the latest version of the app
           required: true
