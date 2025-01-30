@@ -23,7 +23,6 @@ body:
     attributes:
       label: VPI Desktop App version
       description: Please include the version number, which can be found in the app footer.
-      placeholder: Example: 1.0.3
     validations:
       required: true
   
